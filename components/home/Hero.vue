@@ -229,11 +229,12 @@ export default {
     };
   },
   methods: {
-    pdfDownload() {
-      const doc = new jsPDF();
+  async  pdfDownload() {
+    
+      // const doc = new jsPDF();
 
-      doc.text("Hello world!", 10, 10);
-      doc.save("a4.pdf");
+      // doc.text("Hello world!", 10, 10);
+      // doc.save("a4.pdf");
       // const fs = require("fs");
       // const doc = new PDFDocument();
     },

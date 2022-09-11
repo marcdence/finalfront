@@ -804,13 +804,25 @@ export default {
   },
   methods: {
     async submitBook() {
-      try {
-        await this.$store.dispatch("book/addBook", this.book);
-        alert("Successfully Booked!");
-        location = "/";
-      } catch (error) {
-        alert("error");
-      }
+      const responses1 = this.$axios
+        .post(`/buy-paymaya/`, {
+          price:(parseInt(this.book.return_price) + parseInt(this.book.departure_price)) *
+            parseInt(this.book.passenger),
+          product: "Ticket",
+        })
+        .then((res) => {
+          window.open(
+            JSON.parse(res.data)["redirectUrl"],
+            "_blank" // <- This is what makes it open in a new window.
+          );
+        });
+      // try {
+      //   await this.$store.dispatch("book/addBook", this.book);
+      //   alert("Successfully Booked!");
+      //   location = "/";
+      // } catch (error) {
+      //   alert("error");
+      // }
     },
     selectReturn(item) {
       this.book.return_package = item.package_name;
