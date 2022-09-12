@@ -6,7 +6,7 @@
       height="85vh"
       class="d-flex justify-start align-center pl-16"
     >
-      <v-btn @click="pdfDownload">try</v-btn>
+      <!-- <v-btn @click="pdfDownload">try</v-btn> -->
       <v-row>
         <v-col>
           <v-card class="pa-5 rounded-xl" width="1000" height="" elevation="10">
