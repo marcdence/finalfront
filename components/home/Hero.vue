@@ -81,7 +81,7 @@
                       </v-menu>
                     </div>
                   </v-col>
-                  <v-col>
+                  <v-col v-if="book.ticket_type=='Round Trip'">
                     Return
                     <div class="text-h5">
                       <v-menu
@@ -150,7 +150,7 @@
                       ></v-select>
                     </div>
                   </v-col>
-                  <v-col>
+                  <!-- <v-col>
                     With Vehicle
                     <div class="text-h5">
                       <v-select
@@ -159,8 +159,8 @@
                         v-model="book.isHasVehicle"
                       ></v-select>
                     </div>
-                  </v-col>
-                  <v-col>
+                  </v-col> -->
+                  <!-- <v-col>
                     Promo Code
                     <div class="text-h5">
                       <v-text-field
@@ -168,7 +168,7 @@
                         v-model="book.promo_code"
                       ></v-text-field>
                     </div>
-                  </v-col>
+                  </v-col> -->
                 </v-row>
               </v-col>
             </v-row>

@@ -22,6 +22,7 @@
     "pdfkit": "^0.13.0",
     "philippines": "^1.0.0",
     "vue": "^2.6.14",
+    "vue-html2pdf": "^1.8.0",
     "vue-lodash": "^2.1.2",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
