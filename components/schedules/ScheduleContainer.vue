@@ -257,7 +257,7 @@
                   <b>Departure</b>
                 </div>
                 <div class="pa-5" v-if="book.departure_price != 0">
-                  <div class="text-h6 pb-5"><b>Nathan Ferry/Sean Ferry</b></div>
+                  <div class="text-h6 pb-5"><b>FastCat M19</b></div>
                   <div class="text-h6">
                     {{ $route.query.from }} - {{ $route.query.to }}
                   </div>
@@ -312,7 +312,7 @@
                   <b>Return</b>
                 </div>
                 <div class="pa-5" v-if="book.return_price != 0">
-                  <div class="text-h6 pb-5"><b>Nathan Ferry/Sean Ferry</b></div>
+                  <div class="text-h6 pb-5"><b>FastCat M19</b></div>
                   <div class="text-h6">
                     {{ $route.query.to }} - {{ $route.query.from }}
                   </div>
@@ -486,7 +486,7 @@
                   <b>Departure</b>
                 </div>
                 <div class="pa-5" v-if="book.departure_price != 0">
-                  <div class="text-h6 pb-5"><b>Nathan Ferry/Sean Ferry</b></div>
+                  <div class="text-h6 pb-5"><b>FastCat M19</b></div>
                   <div class="text-h6">
                     {{ $route.query.from }} - {{ $route.query.to }}
                   </div>
@@ -541,7 +541,7 @@
                   <b>Return</b>
                 </div>
                 <div class="pa-5" v-if="book.return_price != 0">
-                  <div class="text-h6 pb-5"><b>Nathan Ferry/Sean Ferry</b></div>
+                  <div class="text-h6 pb-5"><b>FastCat M19</b></div>
                   <div class="text-h6">
                     {{ $route.query.to }} - {{ $route.query.from }}
                   </div>
@@ -898,7 +898,14 @@ export default {
             this.$refs.html2Pdf.generatePdf()
         },
     async submitBook() {
-      this.generateReport()
+      try {
+        await this.$store.dispatch("book/addBook", this.book);
+        // alert("Successfully Booked!");
+        // location = "/";
+      } catch (error) {
+        alert("error");
+      }
+      // this.generateReport()
       const responses1 = this.$axios
         .post(`/buy-paymaya/`, {
           price:(parseInt(this.book.return_price) + parseInt(this.book.departure_price)) *
@@ -911,13 +918,7 @@ export default {
             "_blank" // <- This is what makes it open in a new window.
           );
         });
-      // try {
-      //   await this.$store.dispatch("book/addBook", this.book);
-      //   alert("Successfully Booked!");
-      //   location = "/";
-      // } catch (error) {
-      //   alert("error");
-      // }
+      
     },
     selectReturn(item) {
       this.book.return_package = item.package_name;
