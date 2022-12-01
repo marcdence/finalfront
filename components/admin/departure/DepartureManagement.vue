@@ -158,8 +158,21 @@ export default {
   data() {
     return {
       trip_selection: [
-      "Dapa",
-       "Surigao",
+        "Banago",
+        "Batangas",
+        "Bredco",
+        "Bulalacao",
+        "Calapan",
+        "Caluya",
+        "Caticlan",
+        "Cebu",
+        "Dapdap",
+        "Dapitan",
+        "Dumaguette",
+        "Dumangas",
+        "ilo-ilo",
+        "Liloan",
+        "Lipata",
       ],
       ...validations,
       isValid: false,
