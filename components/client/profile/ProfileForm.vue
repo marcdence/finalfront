@@ -10,7 +10,7 @@
       :manual-pagination="false"
       pdf-format="a4"
       pdf-orientation="landscape"
-      pdf-content-width="800px"
+      pdf-content-width="400px"
       ref="html2Pdf"
     >
       <section slot="pdf-content" v-if="selectedItem.ticket_type=='One Way'">
