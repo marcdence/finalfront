@@ -158,8 +158,8 @@ export default {
   data() {
     return {
       trip_selection: [
-      "Dapa",
-        "Surigao",
+      "Surigao",
+        "Dapa",
       ],
       ...validations,
       isValid: false,

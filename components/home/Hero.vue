@@ -210,8 +210,8 @@ export default {
       returnMenu: false,
       departMenu: false,
       trip_selection: [
-      "Dapa",
-        "Surigao",
+      "Surigao",
+        "Dapa",
       ],
     };
   },
