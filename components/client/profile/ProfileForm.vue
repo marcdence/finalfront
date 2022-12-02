@@ -4,7 +4,7 @@
       :show-layout="false"
       :float-layout="true"
       :enable-download="true"
-      :paginate-elements-by-height="1400"
+      :paginate-elements-by-height="700"
       filename="myPDF"
       :pdf-quality="2"
       :manual-pagination="false"
