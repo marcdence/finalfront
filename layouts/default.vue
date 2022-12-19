@@ -146,7 +146,7 @@
 
         <v-card-text class="black--text pt-0">
           Evaristo & Sons Sea Transport Corporation is a domestic shipping
-          company operating cargo and passenger ships
+          company operating cargo and passenger ships. Siargao is an island of nine municipalities in the province of Surigao del Norte. Known as the “Surfing Capital of the Philippines”, Siargao is mainly responsible for introducing surfing to the country. Apart from surfing, Siargao is also open to other activities such as cave explorations and rock climbing.
         </v-card-text>
 
         <v-divider></v-divider>
